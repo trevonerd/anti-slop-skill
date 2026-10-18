@@ -33,6 +33,14 @@ Rules it follows:
 
 The skill follows the open [Agent Skills](https://agentskills.io/specification) format, so the same folder works in every tool below.
 
+**Any agent, one command** (with the [skills CLI](https://github.com/vercel-labs/skills)):
+
+```bash
+npx skills add trevonerd/anti-slop-skill            # this project
+npx skills add trevonerd/anti-slop-skill -g         # all projects
+npx skills add trevonerd/anti-slop-skill -a cursor  # one agent only (claude-code, cursor, codex, ...)
+```
+
 **Claude Code** (personal or project):
 
 ```bash
