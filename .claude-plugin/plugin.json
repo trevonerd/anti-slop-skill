@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "anti-slop",
+  "description": "Audit or rewrite text: verdicts per piece, exact quotes, ready rewrites. Judges quality, never authorship.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Marco Trevisani",
+    "url": "https://github.com/trevonerd"
+  },
+  "homepage": "https://github.com/trevonerd/anti-slop-skill",
+  "repository": "https://github.com/trevonerd/anti-slop-skill",
+  "license": "MIT",
+  "keywords": ["writing", "editing", "ai-slop", "review", "seo", "social-media"]
+}

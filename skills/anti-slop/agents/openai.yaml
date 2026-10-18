@@ -1,0 +1,4 @@
+interface:
+  display_name: "Anti-slop"
+  short_description: "Audit or rewrite copy so it reads like a careful person wrote it"
+  default_prompt: "Use $anti-slop to audit this copy: give APPROVED or BLOCKED per piece, quote each problem and give a ready rewrite."

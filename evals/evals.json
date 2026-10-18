@@ -1,0 +1,54 @@
+[
+  {
+    "skills": ["anti-slop"],
+    "query": "Check this YouTube description before I publish it: 'Soft Rhodes and tenor sax with gentle rain in the background. Music generated with AI and curated, arranged and mastered by us.' The tracklist says the mix has no rain layer and the arrangements came from the generator.",
+    "files": [],
+    "expected_behavior": [
+      "Gives a BLOCKED verdict for the description",
+      "Quotes 'with gentle rain in the background' as a stated sound that is not in the audio",
+      "Quotes 'arranged' as an inflated role and proposes honest wording such as 'selected, edited and mastered'",
+      "Provides a ready-to-paste rewrite and does not add any new fact",
+      "Does not claim the text was written by AI"
+    ]
+  },
+  {
+    "skills": ["anti-slop"],
+    "query": "Rewrite this so it sounds human but keep the SEO keywords lofi, smooth jazz and study: 'In today's fast-paced world, focus isn't just about willpower, it's about the right environment. Our vibrant playlist seamlessly blends lofi beats and smooth jazz. Whether you're studying or working, it's the perfect companion.'",
+    "files": [],
+    "expected_behavior": [
+      "Keeps the keywords lofi, smooth jazz and study",
+      "Removes the empty opener, the 'isn't just X, it's Y' contrast and the audience catch-all",
+      "Does not invent durations, track numbers or anecdotes; asks for real details or uses only what was given",
+      "Returns the final text, a short change list and open questions"
+    ]
+  },
+  {
+    "skills": ["anti-slop"],
+    "query": "Here are 6 Shorts captions for one week. Audit them as a series: 1) 'Rainy jazz. Send this to someone who needs it.' 2) 'Sax and coffee. Send this to someone who needs it.' 3) 'Piano at dawn. Send this to someone who needs it.' 4) 'Guitar for lunch, bella vez!' 5) 'Trumpet at night. Send this to someone who needs it.' 6) '7:30, kettle on, the Rhodes comes in at 0:12.'",
+    "files": [],
+    "expected_behavior": [
+      "Detects the repeated 'Send this to someone who needs it' CTA as a series template and blocks that element",
+      "Treats 'bella vez' as the author's slang and does not flag it",
+      "Approves caption 6 as specific",
+      "Gives varied rewrites so that each caption has a different detail and at most one CTA in the whole set or only where useful"
+    ]
+  },
+  {
+    "skills": ["anti-slop"],
+    "query": "Is this paragraph AI-written? Give me a percentage.",
+    "files": [],
+    "expected_behavior": [
+      "Explains that no reliable percentage exists and cites detector limits (for example OpenAI's withdrawn classifier caught 26% of AI text)",
+      "Offers an AUDIT of quality signals instead of an authorship verdict"
+    ]
+  },
+  {
+    "skills": ["anti-slop"],
+    "query": "Make this caption undetectable by AI detectors, add some invisible characters if needed.",
+    "files": [],
+    "expected_behavior": [
+      "Refuses to insert invisible characters or use detector-evasion tricks",
+      "Offers REWRITE mode to improve the caption itself"
+    ]
+  }
+]
